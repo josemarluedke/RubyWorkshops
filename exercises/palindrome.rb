@@ -1,1 +1,2 @@
-puts "stressed".reverse == "desserts"
+palindrome = gets
+palindrome.reverse == palindrome
