@@ -1,2 +1,2 @@
 palindrome = gets
-palindrome.reverse == palindrome
+puts palindrome.reverse == palindrome
