@@ -1,2 +1,3 @@
+puts "Escreva um número"
 number = gets.to_f
-puts number.round
+puts "O número é #{number.round}"
