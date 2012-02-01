@@ -1,2 +1,2 @@
-palindrome = gets.chop
+palindrome = gets.chomp
 puts palindrome.reverse == palindrome
