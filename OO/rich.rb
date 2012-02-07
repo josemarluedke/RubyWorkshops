@@ -6,16 +6,25 @@ class Rich
     @name, @fortune, @age, @born, @companies = args
   end
   
-  def richer_than? rich
+  def richer_than? rich, year
     return true unless rich.respond_to? :fortune
-    fortune > rich.fortune
+    fortune[year] > rich.fortune[year]
+  end
+  
+  def difference start_year, end_year
+    fortune[end_year] - fortune[start_year]
   end
 end
 
-slim = Rich.new "Slim", 74, 71, "Mexico", ["Telmex", "América Móvil", "Grupo Carso"]
-gates = Rich.new "Gates", 56, 56, "U.S.", ["Microsoft"]
-mittal = Rich.new "Mittal", 31, 60, "India", ["Arcelor Mittal"]
-eike = Rich.new "Eike", 30, 53, "Brasil", ["EBX Group"]
+slim = Rich.new "Slim", {2009 => 35, 2010 => 53.5, 2011 => 74}, 71, "Mexico", ["Telmex", "América Móvil", "Grupo Carso"]
+gates = Rich.new "Gates", {2009 => 40, 2010 => 53, 2011 => 56}, 56, "U.S.", ["Microsoft"]
 
-puts gates.richer_than? eike
-puts mittal.richer_than? slim
+puts gates.fortune[2009]
+puts gates.fortune[2010]
+puts gates.fortune[2011]
+
+puts gates.richer_than? slim, 2009
+puts gates.richer_than? slim, 2010
+
+puts gates.difference 2009, 2010
+puts gates.difference 2009, 2011
