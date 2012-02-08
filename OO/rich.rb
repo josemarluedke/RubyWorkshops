@@ -36,15 +36,11 @@ class Rich
   end
   
   def self.older
-    older = @@list_rich.sort { |a, b| b.age <=> a.age }.first
-    rank = rank(last_year)
-    rank[rank.index(older)]
+    @@list_rich.sort { |a, b| b.age <=> a.age }.first
   end
   
   def self.younger
-    younger = @@list_rich.sort { |a, b| a.age <=> b.age }.first
-    rank = rank(last_year)
-    rank[rank.index(younger)]
+    @@list_rich.sort { |a, b| a.age <=> b.age }.first
   end
   
 private
