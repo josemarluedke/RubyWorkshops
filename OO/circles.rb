@@ -138,3 +138,22 @@ class Donut
     circles[0].diameter
   end
 end
+
+# c1 = circle(0,0,5)
+# c2 = circle(10,0,6)
+# puts c1.intersect? c2
+# 
+# c3 = circle(5,5,2)
+# c4 = circle(10,5,7)
+# puts c3.inside? c4
+
+ # c5 = circle(0,0,0) 
+ # c6 = circle(10,10,10) 
+ # puts (c5..c6).to_a
+
+#d1 = Donut.new Circle.new(Point.new(0, 0), 10), Circle.new(Point.new(0, 0), 4)
+#d2 = Donut.new Circle.new(Point.new(0, 0), 4), Circle.new(Point.new(0, 0), 2)
+
+#puts d1.intersect? Circle.new(Point.new(5, 5), 2)
+#puts d1.intersect? d2
+#puts d1.inside? Circle.new(Point.new(7, 0), 2)
